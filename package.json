@@ -1,0 +1,31 @@
+{
+  "name": "nodegui-mvc-starter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "TeckFreak",
+  "repository": {
+    "url": "https://github.com/RinneganTech/nodegui-mvc-starter"
+  },
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "webpack -p",
+    "start": "webpack && qode ./dist/index.js",
+    "debug": "webpack && qode --inspect ./dist/index.js",
+    "start:watch": "nodemon -e js,ts,css --ignore dist/ --ignore node_modules/ --exec pnpm start"
+  },
+  "dependencies": {
+    "@nodegui/nodegui": "^0.19.0"
+  },
+  "devDependencies": {
+    "@nodegui/packer": "^1.4.1",
+    "@types/node": "^13.7.7",
+    "clean-webpack-plugin": "^3.0.0",
+    "file-loader": "^5.1.0",
+    "native-addon-loader": "^2.0.1",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11"
+  }
+}
